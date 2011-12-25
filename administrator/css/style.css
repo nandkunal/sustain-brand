@@ -1,0 +1,187 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+     font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	line-height:20px;
+	color:#6C7A7D;
+	border:none;
+	background:#8ec2da;
+
+}
+
+
+
+.welcome_text {
+
+font-family:Arial;
+
+font-size:16px;
+
+padding-left:15px;
+
+padding-top:15px;
+
+line-height:35px;
+
+color:#6C7A7D;
+
+font-weight:bold;
+
+}
+.welcome_content {
+
+font-family:Verdana, Arial, Helvetica, sans-serif;
+
+font-size:14px;
+
+color:#6C7A7D;
+
+line-height:19px;
+
+text-indent:25px;
+
+padding-left:15px;
+
+padding-right:15px;
+
+}
+#view_new .header {
+    background: url("../../images/ui-bg_highlight-soft_75_cccccc_1x100.png") repeat-x scroll 50% 50% #CCCCCC;
+    border: 1px solid #AAAAAA;
+    color: #222222;
+	 border-top-right-radius: 4px;
+}
+#view_new tr.odd td {
+    background-color: #F0F0F6;
+}
+#view_new tr.even td {
+    background-color: #FFFFFF;
+}
+table#content_tbl{
+	background:#FFF;
+	margin-top:100px;
+	
+	
+}
+table#view_new{
+ background-color: #CDCDCD;
+font-size: 12px;
+text-align: left;
+border:1px solid #6C7A7D;
+    
+	}
+	table#top_nav{
+		background:url(../images/menu_bar.png) repeat-x ;
+	}
+	
+table#login_tbl{
+	border: 1px solid black;
+background-image: -webkit-gradient(linear, center top, center bottom, from(#fcfcfc), to(#bfbfbf), color-stop(3%, #f7f7f7), color-stop(12%, #f2f2f2), color-stop(90%, #d9d9d9));
+background-image: -webkit-linear-gradient(top, #fcfcfc, #f7f7f7 3%, #f2f2f2 12%, #d9d9d9 90%, #bfbfbf);
+background-image: -moz-linear-gradient(top, #fcfcfc, #f7f7f7 3%, #f2f2f2 12%, #d9d9d9 90%, #bfbfbf);
+background-image: -o-linear-gradient(top, #fcfcfc, #f7f7f7 3%, #f2f2f2 12%, #d9d9d9 90%, #bfbfbf);
+background-image: -ms-linear-gradient(top, #fcfcfc, #f7f7f7 3%, #f2f2f2 12%, #d9d9d9 90%, #bfbfbf);
+background-image: linear-gradient(top, #fcfcfc, #f7f7f7 3%, #f2f2f2 12%, #d9d9d9 90%, #bfbfbf);
+-webkit-box-shadow: 0 1px 5px rgba(99,99,99,0.75);
+-moz-box-shadow: 0 1px 5px rgba(99,99,99,0.75);
+box-shadow: 0 1px 5px rgba(99,99,99,0.75);
+}
+
+.roundbox { 
+-moz-border-radius:15px;
+	border-radius: 8px;
+	background-color: #FFFFFF;
+	height: 110px;
+	width: 120px;
+	border: thin solid #cccccc;
+	margin: 0px;
+	list-style-position: inside;
+}
+.input-small {
+    width: 120px;
+}
+
+.input-small, .input-medium, .input-big, .input-flex, select, textarea {
+    background-color: #EAEAEA;
+    border: 1px solid #959595;
+    color: #333333;
+    font-family: "Lucida Grande","Lucida Sans Unicode",Arial,Helvetica,Verdana,sans-serif;
+    font-size: 12px;
+    padding: 5px;
+}
+h2
+{
+	  color: #000;
+    font-weight: normal;
+    line-height: 1.8em;
+    margin: 0 0 7px;
+	text-decoration:underline;
+}
+.button {
+    background-color: #EAEAEA;
+    border: 1px solid #959595;
+    color: #000;
+    cursor: pointer;
+    font-family: "Lucida Grande","Lucida Sans Unicode",Arial,Helvetica,Verdana,sans-serif;
+    font-size: 12px;
+    padding: 5px 15px;
+}
+table#view_reservation_tbl{
+	border:1px solid;
+	border-color:#959595;
+	border-collapse:collapse;
+}
+	
+table#view_reservation_tbl th {
+	 background: url("../images/highlight_line.gif") repeat-x scroll 0 0 #A8B2C5;
+    border-color: #959595 #959595 #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    color: #FFFFFF;
+  padding: 6px 6px 6px 12px;
+    text-align: left;
+    text-transform: uppercase;
+}
+table#view_reservation_tbl td.odd{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-bottom: 1px solid #959595;
+    border-right: 1px solid #959595;
+    color: #484848;
+    padding: 6px 6px 6px 12px;
+}
+table#view_reservation_tbl td.even{
+    background: none repeat scroll 0 0 #ECEFF5;;
+    border-bottom: 1px solid #959595;
+    border-right: 1px solid #959595;
+   color: #797268;
+    padding: 6px 6px 6px 12px;
+}
+table#view_reservation_tbl td a{
+	text-decoration:none;
+	padding-right:20px;
+	 color: #484848;
+}table#view_reservation_tbl td a:hover{
+	text-decoration:underline;
+}
+.editbox
+{
+display:none;
+   background-color: #EAEAEA;
+    border: 1px solid #959595;
+    color: #333333;
+    font-family: "Lucida Grande","Lucida Sans Unicode",Arial,Helvetica,Verdana,sans-serif;
+    font-size: 12px;
+    padding: 5px;
+}
+tr#edit_save{
+	display:none;
+}
+#search_results{
+    display: none;
+}

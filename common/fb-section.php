@@ -1,0 +1,1 @@
+<div class="fb-recomendation"><img src="images/recommendations-graphic.png" alt="recommendations" /></div>
