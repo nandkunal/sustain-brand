@@ -37,7 +37,7 @@ function check(frm){
 <body>
 <div id="wrapper">
 <div class="left-section">
-<div class="logo"><img src="images/logo.png" alt="logo" /></div>
+<div class="logo"><a href="index.php"><img src="images/logo.png" alt="logo" border="0" /></a></div>
 <?php include("common/left-nav.php");?>
 <?php include("common/newsletter-section.php");?>
 </div>

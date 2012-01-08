@@ -30,6 +30,8 @@ $(document).ready(function(){
 $(document).ready(function(){
 	$(".individual_cost").click(function(){
 		                                   var id_ind=$(this).attr("id");
+										   
+										   
 										    $.ajax({
 																type:"POST",
 																url:"addtocart.php",
@@ -45,6 +47,7 @@ $(document).ready(function(){
 	
 	$(".case_discount").click(function(){
 		                                   var id_case=$(this).attr("id");
+										   
 										    $.ajax({
 																type:"POST",
 																url:"addtocart.php",
@@ -65,7 +68,7 @@ $(document).ready(function(){
 <body>
 <div id="wrapper">
 <div class="left-section">
-<div class="logo"><img src="images/logo.png" alt="logo" /></div>
+<div class="logo"><a href="index.php"><img src="images/logo.png" alt="logo" border="0" /></a></div>
 <?php include("common/left-nav.php");?>
 <?php include("common/newsletter-section.php");?>
 </div>

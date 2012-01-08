@@ -1,4 +1,6 @@
 <?php
+require_once("administrator/includes/UserFunctions.php");
+$auth=UserFunctions::isUserAuthenticated();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -36,7 +38,7 @@ function check(frm){
 <body>
 <div id="wrapper">
 <div class="left-section">
-<div class="logo"><img src="images/logo.png" alt="logo" /></div>
+<div class="logo"><a href="index.php"><img src="images/logo.png" alt="logo" border="0" /></a></div>
 <?php include("common/left-nav.php");?>
 <?php include("common/newsletter-section.php");?>
 </div>

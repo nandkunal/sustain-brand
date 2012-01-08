@@ -32,12 +32,13 @@ $(document).ready(function(){
 $(document).ready(function(){
 	$(".individual_cost").click(function(){
 		                                   var id_ind=$(this).attr("id");
-										    $.ajax({
+										    $.ajax({  
 																type:"POST",
 																url:"addtocart.php",
 																data:"item_id="+id_ind+"&case="+1,
 																success:function(data){
-																						$("#buy_text_individual").html(data);	
+																						$("#buy_text_individual_"+id_ind).html(data);
+																							
 																					    }
 																     });
 										   
@@ -52,7 +53,8 @@ $(document).ready(function(){
 																url:"addtocart.php",
 																data:"item_id="+id_case+"&case="+2,
 																success:function(data){
-																							$("#buy_text_case").html(data);
+																							$("#buy_text_case_"+id_case).html(data);
+																							
 																					    }
 																     });
 										   
@@ -67,7 +69,7 @@ $(document).ready(function(){
 <body>
 <div id="wrapper">
 <div class="left-section">
-<div class="logo"><img src="images/logo.png" alt="logo" /></div>
+<div class="logo"><a href="index.php"><img src="images/logo.png" alt="logo" border="0" /></a></div>
 <?php include("common/left-nav.php");?>
 <?php include("common/newsletter-section.php");?>
 </div>
@@ -99,8 +101,8 @@ $(document).ready(function(){
 <?php echo htmlspecialchars($det['item_description'],ENT_QUOTES);?>
 </div>
 <div class="cost-display">
-<b>Individual</b><i>$<?php echo $det['item_cost'];?></i><u><a href="#" style="text-decoration:none; color:#107144;" id="<?php echo $det['id'];?>" class="individual_cost"><span id="buy_text_individual">BUY NOW</span></a></u>
-<b>Case Discount</b><i>$<?php echo $det['item_discount'];?></i><u><a href="#" style="text-decoration:none;color:#107144;" id="<?php echo $det['id'];?>" class="case_discount"><span id="buy_text_case">BUY NOW</span></a></u>
+<b>Individual</b><i>$<?php echo $det['item_cost'];?></i><u><a href="#" style="text-decoration:none; color:#107144;" id="<?php echo $det['id'];?>" class="individual_cost"><span id="buy_text_individual_<?php echo $det['id'];?>">BUY NOW</span></a></u>
+<b>Case Discount</b><i>$<?php echo $det['item_discount'];?></i><u><a href="#" style="text-decoration:none;color:#107144;" id="<?php echo $det['id'];?>" class="case_discount"><span id="buy_text_case_<?php echo $det['id'];?>">BUY NOW</span></a></u>
 </div>
 </li>
 <?php }?>

@@ -94,11 +94,15 @@ div#wrapper div.order-summary-section ul li span{float:left; width:140px; min-wi
 div#wrapper div.order-summary-section ul li i{float:left; width:55px; min-width:55px; display:block; font-style:normal;}
 div#wrapper div.order-summary-section ul li u{float:left; width:55px; min-width:55px; display:block; text-decoration:none;}
 
+div#wrapper .basket-table{width:600px; border:none; font-size:11px;}
+div#wrapper .basket-table input[type=submit]{ display:block; background:url(../images/check-box-inactive.jpg) no-repeat top left;}
+
 div#wrapper div.payment-section{float:left; width:340px; margin-left:20px;}
 div#wrapper div.payment-section input[type=text]{display:block; width:190px; border:1px solid #974c00; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#974c00;}
 .txt-small{width:70px!important; margin-right:5px; float:left;}
 div#wrapper div.payment-section input[type=submit]{display:block; background: url(../images/main-nav-bg.png) repeat-x; padding:3px 8px; border:none; border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px; font-size:13px; float:left; margin-right:10px; color:#974c00;}
-
+div#wrapper div.buttons {float:left; width:400px; margin-left:300px;}
+div#wrapper div.buttons input[type=submit]{display:block; background: url(../images/main-nav-bg.png) repeat-x; padding:3px 8px; border:none; border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px; font-size:13px; float:left; margin-right:10px; color:#974c00;}
 
 /*account form page css*/
 div#wrapper div.account-form-page{float:left; width:425px; color:#985a31; margin-top:20px; background: url(../images/certified-local.png) no-repeat right center; border:6px solid #ef9f60; border-radius:20px; -moz-border-radius:20px; -webkit-border-radius:20px;}
@@ -115,6 +119,33 @@ div#wrapper div.copyright ul li{list-style:none; float:left; background:url(../i
 div#wrapper div.copyright ul li:first-child{background:none;}
 div#wrapper div.copyright ul li a{float:left; color:#a2a2a2; text-decoration:none; }
 div#wrapper div.copyright ul li a:hover{color:#e57c3d;}
+
+/*basket-item-popup css*/
+div#wrapper div.basket-item-popup{float:left; width:425px; color:#985a31; margin-top:20px; background: url(../images/certified-local.png) no-repeat right center; border:6px solid #ef9f60; border-radius:20px; -moz-border-radius:20px; -webkit-border-radius:20px;}
+div#wrapper div.basket-item-popup div.basket{float:left; display:block; background: url(../images/nav-btn-bg.png) repeat-x top left; padding:3px 17px;  border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px; text-decoration:none; margin:20px;}
+div#wrapper div.basket-item-popup div.basket b{float:left; display:block; color:#a84d10; font-size:13px; text-decoration:none; font-weight:normal;}
+div#wrapper div.basket-item-popup div.basket img{float:left; display:block; padding-left:3px; margin-top:-8px;}
+
+div#wrapper div.basket-item-popup div.item-number{float:left; display:block; color:#a84d10; font-size:13px; text-decoration:none; font-weight:normal; margin:20px;}
+
+div#wrapper div.basket-item-popup .close{float:left; width:11px; height:11px; margin:25px 0 0 150px;}
+
+div#wrapper div.basket-item-popup div.message{float:left; display:block; color:#a84d10; font-size:13px; text-decoration:none; font-weight:normal; margin:20px; width:300px;}
+
+div#wrapper div.basket-item-popup input[type=submit]{display:block; background: url(../images/main-nav-bg.png) repeat-x; padding:3px 8px; border:none; border-radius:8px; -moz-border-radius:8px; -webkit-border-radius:8px; font-size:13px; float:left; margin-right:10px; color:#974c00; margin:20px;}
+
+/*purchase process css*/
+div#wrapper div.purchase-process{float:left; width:600px;}
+div#wrapper div.purchase-process b{font-size:16px; font-weight:bold; display:block; float:left;}
+div#wrapper div.purchase-process ul{margin:0; padding:0; margin-left:20px; float:left;}
+div#wrapper div.purchase-process ul li{list-style:none; float:left; display:block;}
+div#wrapper div.purchase-process ul li a{display:block; float:left;}
+div#wrapper div.purchase-process ul li a label{display:block; float:left; padding:0;}
+div#wrapper div.purchase-process ul li a i{display:block; float:left; padding:0;}
+div#wrapper div.purchase-process ul li a img {display:block; border:none;}
+
+
+
 
 
 

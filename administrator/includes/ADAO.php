@@ -369,8 +369,199 @@ die();
 	
 }
 
+public static function viewBasketItemDetails($item_id,$cat){
+try
+{
+$dbh = new PDO(DB_DSN, DB_LOGIN, DB_PASSWORD);
+
+}
+catch (PDOException $e) {
+print "Error!: " . $e->getMessage() . "<br/>";
+die();
+}
+if($cat==1){
+	
+  $stmt=$dbh->prepare("select id,cat_id,brand_id,item_name,	image_product_display,item_cost,item_url_thumb from t_product_details where id=?");
+  
+}
+else
+{
+  $stmt=$dbh->prepare("select id,cat_id,brand_id,item_name,	image_product_display,item_discount,item_url_thumb from t_product_details where id=?");	
+}
+  $stmt->bindParam(1,$item_id);
+  
+   $stmt->execute();
+       $row=$stmt->fetch();
+	    $dbh=null;
+return $row;	
+	}
+	
+	
+public static function getSalesTaxByZip($zip){
+	try
+{
+$dbh = new PDO(DB_DSN, DB_LOGIN, DB_PASSWORD);
+
+}
+catch (PDOException $e) {
+print "Error!: " . $e->getMessage() . "<br/>";
+die();
+}
+$stmt=$dbh->prepare("select * from t_sales_list where country_zip=?");
+ $stmt->bindParam(1,$zip);
+  
+   $stmt->execute();
+       $row=$stmt->fetch();
+	    $dbh=null;
+return $row;
+  
+}
+	
+public static function isZipValid($zip){
+	
+	try
+{
+$dbh = new PDO(DB_DSN, DB_LOGIN, DB_PASSWORD);
+
+}
+catch (PDOException $e) {
+print "Error!: " . $e->getMessage() . "<br/>";
+die();
+}
+$stmt=$dbh->prepare("select * from t_sales_list where country_zip=?");
+ $stmt->bindParam(1,$zip);
+  
+   $stmt->execute();
+       $count=$stmt->rowCount();
+	    $dbh=null;
+if($count>0){
+	return true;
+}
+else{
+	return false;
+}
+	
+	
 	
 }
+
+public static function getAllShippingMethods(){
+try
+{
+$dbh = new PDO(DB_DSN, DB_LOGIN, DB_PASSWORD);
+
+}
+catch (PDOException $e) {
+print "Error!: " . $e->getMessage() . "<br/>";
+die();
+}
+
+  $stmt=$dbh->prepare("select * from t_shipping_method");
+  
+   $stmt->execute();
+       $row=$stmt->fetchAll();
+	    $dbh=null;
+return $row;	
+		
+}
+
+public static function getShippingDetailsById($id){
+try
+{
+$dbh = new PDO(DB_DSN, DB_LOGIN, DB_PASSWORD);
+
+}
+catch (PDOException $e) {
+print "Error!: " . $e->getMessage() . "<br/>";
+die();
+}
+
+  $stmt=$dbh->prepare("select * from t_shipping_method where id=".$id."");
+  
+   $stmt->execute();
+       $row=$stmt->fetch();
+	    $dbh=null;
+return $row;	
+		
+	
+	
+}
+
+public static function getUserCartItemIdDetails($user_id){
+	
+try
+{
+$dbh = new PDO(DB_DSN, DB_LOGIN, DB_PASSWORD);
+
+}
+catch (PDOException $e) {
+print "Error!: " . $e->getMessage() . "<br/>";
+die();
+}
+
+  $stmt=$dbh->prepare("select concat(item_id,item_case) as data from t_users_cart where user_id=".$user_id."");
+  
+   $stmt->execute();
+       $row=$stmt->fetchAll();
+	    $dbh=null;
+return $row;	
+	
+	
+	
+	
+}
+public static function getItemsCountInCart($id){
+try
+{
+$dbh = new PDO(DB_DSN, DB_LOGIN, DB_PASSWORD);
+
+}
+catch (PDOException $e) {
+print "Error!: " . $e->getMessage() . "<br/>";
+die();
+}
+
+  $stmt=$dbh->prepare("select * from t_users_cart where user_id=".$id."");
+  
+   $stmt->execute();
+     $no_items= $stmt->rowCount();
+	    $dbh=null;
+return $no_items;	
+	
+	
+	
+}
+public static function deleteItemsfromBasket($id,$item_id_cat){
+	
+	try
+{
+$dbh = new PDO(DB_DSN, DB_LOGIN, DB_PASSWORD);
+
+}
+catch (PDOException $e) {
+print "Error!: " . $e->getMessage() . "<br/>";
+die();
+}
+$item_id=substr($item_id_cat,0,strlen($item_id_cat)-1) ;
+	    $cat=substr($item_id_cat,-1);
+
+  $stmt=$dbh->prepare("delete from t_users_cart where item_id=".$item_id." and item_case=".$cat." and user_id=".$id."");
+  
+   $stmt->execute();
+       
+	    $dbh=null;
+
+	return true;
+	
+}
+
+
+
+	
+}
+	
+
+
 
 
 

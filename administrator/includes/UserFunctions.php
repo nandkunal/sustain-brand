@@ -41,8 +41,26 @@ class UserFunctions extends ADAO
 	}
 	
 		
-		
+	public static function ExplodeItems($cart){
+		$contents=array();
+		$row=array();
+		$cartItems=explode(",",$cart);
+		foreach($cartItems as $item){
+			$contents[$item] = (isset($contents[$item])) ? $contents[$item] + 1 : 1;
+		}
+		return $contents;
+	}
 	
+ public static function SeparateDBItems($item_id_array){
+	$contents=array(); 
+	 
+	 foreach($item_id_array as $item){
+			$contents[$item] = (isset($contents[$item])) ? $contents[$item] + 1 : 1;
+		}
+		return $contents;
+	}
+	 
+
 	
 	
 	

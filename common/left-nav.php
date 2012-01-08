@@ -16,8 +16,8 @@ if(is_array($res2)){
 <?php foreach($res2 as $row2){?>
 <li><a href="show_products.php?id_main=<?php echo $row2['id'];?>&brand_id_main=<?php echo $row2['brand_id'];?>"><?php echo $row2['value'];?></a>
 <?php
-if((isset($_GET['id_main']))&&(isset($_GET['brand_id_main']))){
-	if(ADAO::isProductsExists($row2['id'])){
+if((isset($_GET['id_main']))&&(isset($_GET['brand_id_main']))&&($row2['id']==$_GET['id_main'])){
+	if(ADAO::isProductsExists($_GET['id_main'])){
 		
 	$res3=ADAO::getAllProductsByCat($row2['id'],$brand_id_main);
 	if(is_array($res3)){
